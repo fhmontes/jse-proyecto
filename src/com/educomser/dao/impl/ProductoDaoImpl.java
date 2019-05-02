@@ -140,8 +140,8 @@ public class ProductoDaoImpl implements ProductoDao {
             st.close();
             rs.close();
         } catch (SQLException ex) {
-            String msg = "Error al listar: " + ex;
-            Logger.getLogger(ProductoDaoImpl.class.getName()).log(Level.SEVERE, null, msg);
+            String msg = "Error al listar";
+            Logger.getLogger(ProductoDaoImpl.class.getName()).log(Level.SEVERE, msg, ex);
         } finally {
             conexion.close();
         }

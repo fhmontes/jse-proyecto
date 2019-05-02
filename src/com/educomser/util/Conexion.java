@@ -12,13 +12,13 @@ public class Conexion {
     private static final String DRIVER = "org.postgresql.Driver";
     private static final String DATABASE = "jseproyecto";
     private static final String URL = "jdbc:postgresql://localhost:5432/";
-    private static final String USER = "postgres";
-    private static final String PASS = "123456";
+    private static final String USERNAME = "postgres";
+    private static final String PASSWORD = "123456";
 
     public Conexion() {
         try {
             Class.forName(DRIVER);
-            connection = DriverManager.getConnection(URL+DATABASE, USER, PASS);
+            connection = DriverManager.getConnection(URL+DATABASE, USERNAME, PASSWORD);
         } catch (ClassNotFoundException ex) {
             String msg="Error al cargar controlador de Base de Datos";
             Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, msg, ex);
